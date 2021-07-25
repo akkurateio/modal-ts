@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VuetifyDialog from 'vuetify-dialog'
+import AkkurateModalTs from "../akkurate-modal-ts";
 
 export default (obj, inject) => {
     // aviable only in client side
@@ -18,7 +18,7 @@ export default (obj, inject) => {
     }))
     context.route = obj.route
 
-    Vue.use(VuetifyDialog, { context, ...pluginOptions })
+    Vue.use(AkkurateModalTs, { context, ...pluginOptions })
     const instance = Vue.prototype[property]
     if (instance) {
         obj[property] = instance
