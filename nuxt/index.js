@@ -1,17 +1,17 @@
 /*
-Nuxt.js module for vuetify-dialog
+Nuxt.js module for akkurate-modal-ts
 Usage:
-  - Install vuetify-dialog package
+  - Install akkurate-modal-ts package
   - Add this into your nuxt.config.js file:
   {
     modules: [
       // Simple usage
-      'vuetify-dialog/nuxt'
+      'akkurate-modal-ts/nuxt'
       // Optionally passing options in module configuration
-      ['vuetify-dialog/nuxt', { property: '$dialog' }]
+      ['akkurate-modal-ts/nuxt', { property: '$modal' }]
     ],
     // Optionally passing options in module top level configuration
-    vuetifyDialog: { property: '$dialog' }
+    akkurateModalTs: { property: '$modal' }
   }
 */
 

@@ -1,6 +1,6 @@
 {
     "name": "akkurate-modal-ts",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Component Modal VueJS",
     "main": "dist/akkurate-modal-ts.ssr.js",
     "browser": "dist/akkurate-modal-ts.esm.js",

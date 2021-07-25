@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import AkkurateModalTs from "../akkurate-modal-ts";
+import AkkurateModalTs from "akkurate-modal-ts";
 
 export default (obj, inject) => {
     // aviable only in client side
