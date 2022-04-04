@@ -111,7 +111,7 @@ export default class Modal extends Vue {
     const classes: string[] = []
 
     if (!this.options.mask) {
-      classes.push('opacity-0')
+      classes.push('bg-opacity-0')
     }
 
     if( this.options.customMaskClasses) {
