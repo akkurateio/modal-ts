@@ -9,7 +9,7 @@ Akkurate Modal est un plugin pour créer une modal facilement avec VueJs.
 ```json
 "dependencies": {
     // ...
-    "akkurate-modal-ts": "git+ssh://git@bitbucket.org/subvitaminetm/akkurate-modal-ts.git",
+    "akkurate-modal-ts": "git+ssh://git@bitbucket.org/akkurateio/modal-ts.git",
     //...
   },
 ```
