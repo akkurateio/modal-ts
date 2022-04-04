@@ -92,39 +92,6 @@ export default class Modal extends Vue {
     this.onEsc();
   }
 
-  get options(): Opts {
-    return {
-      customMaskClasses: [],
-      dialogClassName: null,
-      customStyles: null,
-      className: null,
-      closeOnClickMask: true,
-      closeOnEsc: false,
-      animation: 'zoom',
-      duration: 300,
-      mask: true,
-      ...this.opts,
-    };
-  }
-
-  get maskClasses(): string[] {
-    const classes: string[] = []
-
-    if (!this.options.mask) {
-      classes.push('bg-opacity-0')
-    }
-
-    if( this.options.customMaskClasses) {
-      this.options.customMaskClasses.forEach((prop: string) => {
-        classes.push(prop)
-      })
-    } else {
-      classes.push('akk-modal-mask')
-    }
-
-    return classes
-  }
-
   hide(args: any = false): void {
     this.show = false;
     setTimeout(() => {
@@ -156,6 +123,38 @@ export default class Modal extends Vue {
       },
     };
   }
+
+  get options(): Opts {
+    return {
+      customMaskClasses: [],
+      dialogClassName: null,
+      customStyles: null,
+      className: null,
+      closeOnClickMask: true,
+      closeOnEsc: false,
+      animation: 'zoom',
+      duration: 300,
+      mask: true,
+      ...this.opts,
+    };
+  }
+
+  get maskClasses(): string[] {
+    const classes: string[] = ['akk-modal-mask']
+
+    if (!this.options.mask) {
+      classes.push('bg-opacity-0')
+    }
+
+    if( this.options.customMaskClasses) {
+      this.options.customMaskClasses.forEach((prop: string) => {
+        classes.push(prop)
+      })
+    }
+
+    return classes
+  }
+
 }
 </script>
 <style scoped>
@@ -164,8 +163,8 @@ export default class Modal extends Vue {
   z-index: 9998;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
   /*display: table;*/
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);

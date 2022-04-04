@@ -354,39 +354,6 @@ let Modal = (_dec = Prop({
     this.onEsc();
   }
 
-  get options() {
-    return {
-      customMaskClasses: [],
-      dialogClassName: null,
-      customStyles: null,
-      className: null,
-      closeOnClickMask: true,
-      closeOnEsc: false,
-      animation: 'zoom',
-      duration: 300,
-      mask: true,
-      ...this.opts
-    };
-  }
-
-  get maskClasses() {
-    const classes = [];
-
-    if (!this.options.mask) {
-      classes.push('bg-opacity-0');
-    }
-
-    if (this.options.customMaskClasses) {
-      this.options.customMaskClasses.forEach(prop => {
-        classes.push(prop);
-      });
-    } else {
-      classes.push('akk-modal-mask');
-    }
-
-    return classes;
-  }
-
   hide(args = false) {
     this.show = false;
     setTimeout(() => {
@@ -416,6 +383,37 @@ let Modal = (_dec = Prop({
         this.show = false;
       }
     };
+  }
+
+  get options() {
+    return {
+      customMaskClasses: [],
+      dialogClassName: null,
+      customStyles: null,
+      className: null,
+      closeOnClickMask: true,
+      closeOnEsc: false,
+      animation: 'zoom',
+      duration: 300,
+      mask: true,
+      ...this.opts
+    };
+  }
+
+  get maskClasses() {
+    const classes = ['akk-modal-mask'];
+
+    if (!this.options.mask) {
+      classes.push('bg-opacity-0');
+    }
+
+    if (this.options.customMaskClasses) {
+      this.options.customMaskClasses.forEach(prop => {
+        classes.push(prop);
+      });
+    }
+
+    return classes;
   }
 
 }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "opts", [_dec], {
@@ -486,8 +484,8 @@ var __vue_staticRenderFns__$1 = [];
 
 const __vue_inject_styles__$1 = function (inject) {
   if (!inject) return;
-  inject("data-v-7e0ce93a_0", {
-    source: ".akk-modal-mask[data-v-7e0ce93a]{position:fixed;z-index:9998;top:0;left:0;width:100%;height:100%;display:flex;background-color:rgba(0,0,0,.5);transition:opacity .3s ease}.akk-modal-enter[data-v-7e0ce93a]{opacity:0}.akk-modal-leave-active[data-v-7e0ce93a]{opacity:0}.akk-modal-enter .component[data-v-7e0ce93a],.akk-modal-leave-active .component[data-v-7e0ce93a]{-webkit-transform:scale(1.1);transform:scale(1.1)}.component[data-v-7e0ce93a]{margin:0 auto}",
+  inject("data-v-218f24d4_0", {
+    source: ".akk-modal-mask[data-v-218f24d4]{position:fixed;z-index:9998;top:0;left:0;bottom:0;right:0;display:flex;background-color:rgba(0,0,0,.5);transition:opacity .3s ease}.akk-modal-enter[data-v-218f24d4]{opacity:0}.akk-modal-leave-active[data-v-218f24d4]{opacity:0}.akk-modal-enter .component[data-v-218f24d4],.akk-modal-leave-active .component[data-v-218f24d4]{-webkit-transform:scale(1.1);transform:scale(1.1)}.component[data-v-218f24d4]{margin:0 auto}",
     map: undefined,
     media: undefined
   });
@@ -495,7 +493,7 @@ const __vue_inject_styles__$1 = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$1 = "data-v-7e0ce93a";
+const __vue_scope_id__$1 = "data-v-218f24d4";
 /* module identifier */
 
 const __vue_module_identifier__$1 = undefined;

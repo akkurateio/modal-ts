@@ -586,7 +586,7 @@ var Modal = (_dec = vuePropertyDecorator.Prop({
   }, {
     key: "maskClasses",
     get: function get() {
-      var classes = [];
+      var classes = ['akk-modal-mask'];
 
       if (!this.options.mask) {
         classes.push('bg-opacity-0');
@@ -596,8 +596,6 @@ var Modal = (_dec = vuePropertyDecorator.Prop({
         this.options.customMaskClasses.forEach(function (prop) {
           classes.push(prop);
         });
-      } else {
-        classes.push('akk-modal-mask');
       }
 
       return classes;
@@ -671,8 +669,8 @@ var __vue_staticRenderFns__$1 = [];
 
 var __vue_inject_styles__$1 = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-7e0ce93a_0", {
-    source: ".akk-modal-mask[data-v-7e0ce93a]{position:fixed;z-index:9998;top:0;left:0;width:100%;height:100%;display:flex;background-color:rgba(0,0,0,.5);transition:opacity .3s ease}.akk-modal-enter[data-v-7e0ce93a]{opacity:0}.akk-modal-leave-active[data-v-7e0ce93a]{opacity:0}.akk-modal-enter .component[data-v-7e0ce93a],.akk-modal-leave-active .component[data-v-7e0ce93a]{-webkit-transform:scale(1.1);transform:scale(1.1)}.component[data-v-7e0ce93a]{margin:0 auto}",
+  inject("data-v-218f24d4_0", {
+    source: ".akk-modal-mask[data-v-218f24d4]{position:fixed;z-index:9998;top:0;left:0;bottom:0;right:0;display:flex;background-color:rgba(0,0,0,.5);transition:opacity .3s ease}.akk-modal-enter[data-v-218f24d4]{opacity:0}.akk-modal-leave-active[data-v-218f24d4]{opacity:0}.akk-modal-enter .component[data-v-218f24d4],.akk-modal-leave-active .component[data-v-218f24d4]{-webkit-transform:scale(1.1);transform:scale(1.1)}.component[data-v-218f24d4]{margin:0 auto}",
     map: undefined,
     media: undefined
   });
@@ -680,10 +678,10 @@ var __vue_inject_styles__$1 = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$1 = "data-v-7e0ce93a";
+var __vue_scope_id__$1 = "data-v-218f24d4";
 /* module identifier */
 
-var __vue_module_identifier__$1 = "data-v-7e0ce93a";
+var __vue_module_identifier__$1 = "data-v-218f24d4";
 /* functional template */
 
 var __vue_is_functional_template__$1 = false;
