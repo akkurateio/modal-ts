@@ -5,7 +5,7 @@
         v-if="show"
         :class="maskClasses"
     >
-      <div class="akk-modal-wrapper">
+      <div class="akk-modal-wrapper" :class="wrapperClasses">
         <component
             class="component"
             ref="refComponent"
@@ -57,7 +57,7 @@ export default class Modal extends Vue {
 
   show = false;
   init = false;
-  
+
   mounted() {
     this.onInit();
     if (this.initShow) {
@@ -127,7 +127,7 @@ export default class Modal extends Vue {
 
   get options(): Opts {
     return {
-      customMaskClasses: [],
+      customMaskClasses: ['items-center', 'justify-center'],
       dialogClasses: [],
       customStyles: null,
       className: null,
@@ -138,6 +138,16 @@ export default class Modal extends Vue {
       mask: true,
       ...this.opts,
     };
+  }
+
+  get wrapperClasses(): string[] {
+    const wrapperClasses: string[] = []
+
+    this.options.dialogClasses.forEach((prop:string) => {
+      wrapperClasses.push(prop)
+    })
+
+    return wrapperClasses
   }
 
   get maskClasses(): string[] {
@@ -168,20 +178,18 @@ export default class Modal extends Vue {
   right: 0;
   /*display: table;*/
   display: flex;
-  align-items: center;
-  justify-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
 }
 
-/*.akk-modal-mask.hide {*/
-/*    background-color: rgba(0, 0, 0, 0);*/
-/*}*/
-
-.akk-modal-wrapper {
-  /*display: table-cell;*/
-  /*vertical-align: middle;*/
+.akk-modal-mask.bg-opacity-0 {
+    background-color: rgba(0, 0, 0, 0);
 }
+
+/*.akk-modal-wrapper {*/
+/*  display: table-cell;*/
+/*  vertical-align: middle;*/
+/*}*/
 
 .akk-modal-enter {
   opacity: 0;

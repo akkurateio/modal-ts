@@ -1,6 +1,6 @@
 {
     "name": "akkurate-modal-ts",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Component Modal VueJS",
     "main": "dist/akkurate-modal-ts.ssr.js",
     "browser": "dist/akkurate-modal-ts.esm.js",
@@ -8,7 +8,7 @@
     "unpkg": "dist/akkurate-modal-ts.min.js",
     "types": "akkurate-modal-ts.d.ts",
     "license": "Tugudu",
-    "author": "John Bioux",
+    "author": "Subvitamine",
     "files": [
         "dist/*",
         "akkurate-modal-ts.d.ts",
