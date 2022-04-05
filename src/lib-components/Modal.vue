@@ -25,7 +25,7 @@ const Escape = 'Escape';
 
 interface OptsProp {
   customMaskClasses?: string[];
-  dialogClassName?: any;
+  dialogClasses?: string[];
   customStyles?: any;
   className?: any;
   closeOnClickMask?: boolean;
@@ -36,7 +36,7 @@ interface OptsProp {
 }
 interface Opts {
   customMaskClasses: string[];
-  dialogClassName: any;
+  dialogClasses: string[];
   customStyles: any;
   className: any;
   closeOnClickMask: boolean;
@@ -57,6 +57,7 @@ export default class Modal extends Vue {
 
   show = false;
   init = false;
+  
   mounted() {
     this.onInit();
     if (this.initShow) {
@@ -127,7 +128,7 @@ export default class Modal extends Vue {
   get options(): Opts {
     return {
       customMaskClasses: [],
-      dialogClassName: null,
+      dialogClasses: [],
       customStyles: null,
       className: null,
       closeOnClickMask: true,
@@ -167,6 +168,8 @@ export default class Modal extends Vue {
   right: 0;
   /*display: table;*/
   display: flex;
+  align-items: center;
+  justify-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
 }
