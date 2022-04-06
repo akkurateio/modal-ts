@@ -128,7 +128,7 @@ export default class Modal extends Vue {
   get options(): Opts {
     return {
       customMaskClasses: ['items-center', 'justify-center'],
-      dialogClasses: [],
+      dialogClasses: ['w-full'],
       customStyles: null,
       className: null,
       closeOnClickMask: true,

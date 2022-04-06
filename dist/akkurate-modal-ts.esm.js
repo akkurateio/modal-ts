@@ -388,7 +388,7 @@ let Modal = (_dec = Prop({
   get options() {
     return {
       customMaskClasses: ['items-center', 'justify-center'],
-      dialogClasses: [],
+      dialogClasses: ['w-full'],
       customStyles: null,
       className: null,
       closeOnClickMask: true,
@@ -493,8 +493,8 @@ var __vue_staticRenderFns__$1 = [];
 
 const __vue_inject_styles__$1 = function (inject) {
   if (!inject) return;
-  inject("data-v-6255dbf4_0", {
-    source: ".akk-modal-mask[data-v-6255dbf4]{position:fixed;z-index:9998;top:0;left:0;bottom:0;right:0;display:flex;background-color:rgba(0,0,0,.5);transition:opacity .3s ease}.akk-modal-mask.bg-opacity-0[data-v-6255dbf4]{background-color:rgba(0,0,0,0)}.akk-modal-enter[data-v-6255dbf4]{opacity:0}.akk-modal-leave-active[data-v-6255dbf4]{opacity:0}.akk-modal-enter .component[data-v-6255dbf4],.akk-modal-leave-active .component[data-v-6255dbf4]{-webkit-transform:scale(1.1);transform:scale(1.1)}.component[data-v-6255dbf4]{margin:0 auto}",
+  inject("data-v-2d23998b_0", {
+    source: ".akk-modal-mask[data-v-2d23998b]{position:fixed;z-index:9998;top:0;left:0;bottom:0;right:0;display:flex;background-color:rgba(0,0,0,.5);transition:opacity .3s ease}.akk-modal-mask.bg-opacity-0[data-v-2d23998b]{background-color:rgba(0,0,0,0)}.akk-modal-enter[data-v-2d23998b]{opacity:0}.akk-modal-leave-active[data-v-2d23998b]{opacity:0}.akk-modal-enter .component[data-v-2d23998b],.akk-modal-leave-active .component[data-v-2d23998b]{-webkit-transform:scale(1.1);transform:scale(1.1)}.component[data-v-2d23998b]{margin:0 auto}",
     map: undefined,
     media: undefined
   });
@@ -502,7 +502,7 @@ const __vue_inject_styles__$1 = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$1 = "data-v-6255dbf4";
+const __vue_scope_id__$1 = "data-v-2d23998b";
 /* module identifier */
 
 const __vue_module_identifier__$1 = undefined;
